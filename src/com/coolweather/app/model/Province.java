@@ -1,6 +1,6 @@
 package com.coolweather.app.model;
 
-public class Provice {
+public class Province {
 	private int id;
 	private String proviceName;
 	private String proviceCode;

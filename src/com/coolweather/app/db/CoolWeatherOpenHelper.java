@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 /**
- * Provice,City,Country三张表的建立
+ * Provice,City,County三张表的建立
  * @author xu
  *
  */
@@ -26,12 +26,12 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 			+"city_code text,"
 			+"provice_id integer)";
 	/**
-	 * Country表建表语句
+	 * County表建表语句
 	 */
-	public static final String CREATE_COUNTRY = "create table Country("
+	public static final String CREATE_COUNTY = "create table County("
 			+"id integer primary key autoincrement,"
-			+"country_name text,"
-			+"country_code text,"
+			+"county_name text,"
+			+"county_code text,"
 			+"city_id integer)";
 	
 	public CoolWeatherOpenHelper(Context context, String name,
@@ -43,7 +43,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL(CREATE_PROVICE);  //创建Province表
 		db.execSQL(CREATE_CITY);   //创建City表
-		db.execSQL(CREATE_COUNTRY); //创建Country表
+		db.execSQL(CREATE_COUNTY); //创建County表
 		
 	}
 
